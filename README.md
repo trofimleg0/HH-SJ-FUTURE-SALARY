@@ -30,7 +30,7 @@ python main.py
 ```
 
 Example:  
-HeadHunter: `Area`: Moscow, `Period`: 1 day
+HeadHunter: `Area`: Moscow, `Period`: 1 day  
 SuperJob: `Area`: Moscow, `Period`: 7 days
 
-![Image alt](https://github.com/{trofimleg0}/{repository}/raw/{main}/{path}/Example.png)
+![Example](https://github.com/trofimleg0/HH-SJ-Future-Salary/blob/main/Example.png)
