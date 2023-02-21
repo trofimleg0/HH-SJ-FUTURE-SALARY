@@ -1,4 +1,5 @@
 import os
+import copy
 import requests
 import itertools
 from terminaltables import AsciiTable
@@ -118,18 +119,18 @@ if __name__ == '__main__':
         'Swift', 'TypeScript', 'Kotlin', 'Objective-C', 'Scala', 'Rust'
     ]
 
-    hh_table_data = [[
+    hh_table_columns = [[
         'Programming language', 'Vacancies_found', 'Vacancies_processed',
         'Average_salary'
     ]]
 
-    sj_table_data = hh_table_data.copy()
+    sj_table_columns = copy.deepcopy(hh_table_columns)
 
     for prog_language in prog_languages:
-        hh_table_data.append(
+        hh_table_columns.append(
             get_hh_statistic(prog_language, hh_area, hh_period))
-        sj_table_data.append(
+        sj_table_columns.append(
             get_sj_statistic(prog_language, sj_key, sj_area, sj_period))
 
-    print(AsciiTable(hh_table_data, 'HeadHunter').table)
-    print(AsciiTable(sj_table_data, 'SuperJob').table)
+    print(AsciiTable(hh_table_columns, 'HeadHunter').table)
+    print(AsciiTable(sj_table_columns, 'SuperJob').table)
